@@ -1,0 +1,43 @@
+@page "{id:int?}"
+@model RazorPagesMovie.Pages.Cards.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Card</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Card.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Card.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Card.PokemonType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Card.PokemonType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Card.ExpansionSet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Card.ExpansionSet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Card.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Card.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Card.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
